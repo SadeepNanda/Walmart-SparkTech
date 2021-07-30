@@ -1,0 +1,134 @@
+<html>
+<head>
+<title>Try On!</title>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='./images/favicon.png') }}" type="image/x-icon">
+
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- Glidejs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" />
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <title>Lakmé 9to5 Foundation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+<!-- Navigation -->
+    <nav class="nav">
+        <div class="navigation container">
+          <div class="logo">
+            <h1>Walmart</h1>
+          </div>
+
+          <div class="menu">
+            <div class="top-nav">
+              <div class="logo">
+                <h1>Walmart</h1>
+              </div>
+              <div class="close">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="product.html" class="nav-link">Products</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a href="#account" class="nav-link">Account</a>
+              </li>
+              <li class="nav-item">
+                <a href="cart.html" class="nav-link icon"><i class="bx bx-shopping-bag"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <a href="cart.html" class="cart-icon">
+            <i class="bx bx-shopping-bag"></i>
+          </a>
+
+          <div class="hamburger">
+            <i class="bx bx-menu"></i>
+          </div>
+        </div>
+      </nav>
+<section class="section product-detail">
+    <div class="details container-md">
+      <div class="left">
+      <div class="main">
+        <img src="{{ url_for('static', filename='./images/pic30.jpeg') }}" alt="">
+      </div>
+        <div class="thumbnails">
+          <div class="thumbnail">
+            <img src="{{ url_for('static', filename='./images/pic31.jpeg') }}" alt="">
+          </div>
+          <div class="thumbnail">
+            <img src="{{ url_for('static', filename='./images/pic32.jpeg') }}" alt="">
+          </div>
+          <div class="thumbnail">
+            <img src="{{ url_for('static', filename='./images/pic33.jpeg') }}" alt="">
+          </div>
+          <div class="thumbnail">
+            <img src="{{ url_for('static', filename='./images/pic34.jpeg') }}" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <span>Home/Lakmés Foundation</span>
+        <h1>Lakmé 9to5 Foundation </h1>
+
+<div class="container">
+<div class="row">
+    <h2>Select a file to upload</h2>
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+    {% if filename %}
+        <div>
+            <img src="{{ url_for('display_image', filename=filename) }}">
+        </div>
+    {% endif %}
+    <form method="post" action="/uploadpic2" enctype="multipart/form-data">
+        <dl>
+            <p>
+                <input type="file" name="file" class="form-control" autocomplete="off" required>
+            </p>
+        </dl>
+        <p>
+            <input type="submit" value="Submit" class="btn btn-info">
+        </p>
+    </form>
+   <a href="{{url_for('displayresult2')}}">
+   <button >Try On!</button>
+               </a>
+</div>
+</div>
+<h3>Product Detail</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima delectus nulla voluptates nesciunt
+          quidem laudantium, quisquam voluptas facilis dicta in explicabo, laboriosam ipsam suscipit!</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

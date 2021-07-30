@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <!-- Box icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  <title>Walmart</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="home" class="header">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="navigation container">
+        <div class="logo">
+          <h1>Walmart</h1>
+        </div>
+
+        <div class="menu">
+          <div class="top-nav">
+            <div class="logo">
+              <h1>Walmart</h1>
+            </div>
+            <div class="close">
+              <i class="bx bx-x"></i>
+            </div>
+          </div>
+
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link scroll-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="product.html" class="nav-link">Products</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link scroll-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link scroll-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="#account" class="nav-link scroll-link">Account</a>
+            </li>
+            <li class="nav-item">
+              <a href="cart.html" class="nav-link icon"><i class="bx bx-shopping-bag"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <a href="cart.html" class="cart-icon">
+          <i class="bx bx-shopping-bag"></i>
+        </a>
+
+        <div class="hamburger">
+          <i class="bx bx-menu"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <img src="{{ url_for('static', filename='banner.jpg') }}" alt="dgdsg"  />
+
+  </header>
+
+    <!-- Featured -->
+    <section class="section featured">
+      <div class="title">
+        <h1>Makeup Products</h1>
+      </div>
+
+      <div class="product-center container">
+        <div class="product">
+          <div class="product-header">
+            <img src="{{url_for('static', filename='./images/pic27.JPG')}}" alt="">
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="{{ url_for('getpic') }}">
+              <h3>Crayon Lipstick</h3>
+            </a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="{{ url_for('static', filename='./images/pic26.JPG') }}" alt="">
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="{{ url_for('getpic1') }}"><h3>Matte Lipstick</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="{{ url_for('static', filename='./images/pic28.JPG') }}" alt="">
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="{{ url_for('getpic2') }}"><h3>Lakmé 9to5 Foundation</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="{{ url_for('static', filename='./images/pic14.JPG') }}" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="{{ url_for('getpic')}}"><h3>Bobbi Brown</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Latest -->
+    <section class="section featured">
+      <div class="title">
+        <h1>Latest Products</h1>
+      </div>
+
+      <div class="product-center container">
+        <div class="product">
+          <div class="product-header">
+            <img src="{{ url_for('static', filename='pic10.JPG') }}" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="{{ url_for('getpic') }}"><h3>Boy’s T-Shirt</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="{{ url_for('static', filename='pic6.JPG') }}" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="{{ url_for('getpic') }}"><h3>Women Crop Top</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="{{ url_for('static', filename='pic7.JPG') }}" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="{{ url_for('getpic') }}"><h3>Smocked Crop Top</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="{{ url_for('static', filename='pic4.JPG') }}" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="{{ url_for('getpic') }}"><h3>Boy’s T-Shirt</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="{{ url_for('static', filename='pic9.JPG') }}" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="{{ url_for('getpic') }}"><h3>Boy’s T-Shirt</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="{{ url_for('static', filename='pic10.JPG') }}" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i href="http://127.0.0.1:5501/product-details.html" class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="{{ url_for('getpic') }}"><h3>Boy’s T-Shirt</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="{{ url_for('static', filename='pic8.JPG') }}" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="{{ url_for('getpic') }}"><h3>High Neck Top</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <img src="{{ url_for('static', filename='pic5.JPG') }}" alt="">
+
+            <ul class="icons">
+              <span><i class="bx bx-heart"></i></span>
+              <span><i class="bx bx-shopping-bag"></i></span>
+              <span><i class="bx bx-search"></i></span>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="{{ url_for('getpic') }}"><h3>Boy’s T-Shirt</h3></a>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <h4 class="price">$50</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="section footer">
+  </footer>
+  <!-- End Footer -->
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <!-- Custom Script -->
+  <script src="{{ url_for('static', filename='./js/index.js') }}"></script>
+</body>
+
+</html>
